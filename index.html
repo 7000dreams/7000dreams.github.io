@@ -19,11 +19,35 @@
     <div class="container">
         <h2>Welcome!</h2>
         <p>This website is a personal website which is a repository of some of my writings, reflections and activities.</p>
-        <p>Long-form reflective essays are found on the <a href="reflections.html" >Reflections</a> page. The <a href="academics.html" >Academics</a> page will contain links to my academic writing and other academic materials. The <a href="climbing.html">Climbing</a> page has trip notes for various hikes and climbs. </p>
-        
+        <p>Long-form reflective essays are found on the <a href="reflections.html">Reflections</a> page. The <a href="academics.html">Academics</a> page will contain links to my academic writing and other academic materials. The <a href="climbing.html">Climbing</a> page has trip notes for various hikes and climbs. </p>
+        <p>On the footer of each page, you will find some quotes which resonate with me, or which give me food for thought. Refresh the page for a new quote! I hope you relish them too.</p>
+        <p>I have some thoughts on further additions to this website as well. For instance, I am trying to set up a 'Curiosities' page, where I will add on a weekly basis something which I was curious about and learnt. Many times, for example, my daughter will ask something which she is curious about (<em>"If light can travel through a vacuum, why can't sound?"</em>), and that makes me search for the best way to explain something. I thought a collection of question and answers such as these may be of some interest to children and to parents of young children.</p>        
     </div>
     <footer>
-        <p></p>
+        <div id="quote-container"></div> <!-- Container for the quote -->
+        <script>
+            // Function to fetch quotes from the text file
+            async function fetchQuotes() {
+                const response = await fetch('quotes.txt');
+                const data = await response.text();
+                return data.split('\n').filter(quote => quote.trim() !== '');
+            }
+
+            // Function to display a random quote
+            async function displayRandomQuote() {
+                const quotes = await fetchQuotes();
+                if (quotes.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * quotes.length);
+                    const randomQuote = quotes[randomIndex];
+                    document.getElementById('quote-container').textContent = randomQuote;
+                } else {
+                    document.getElementById('quote-container').textContent = "No quotes available.";
+                }
+            }
+
+            // Call the function to display a quote when the page loads
+            displayRandomQuote();
+        </script>
     </footer>
 </body>
 </html>
