@@ -25,6 +25,7 @@ footer {
     color: #FFFFFF; /* White text */
     padding: 20px;
     font-size: 1em; /* Standard font size */
+    margin: 60px 500px 60px 200px;
     position: relative; /* For positioning any elements inside the footer */
     bottom: 0;
     width: 100%;
