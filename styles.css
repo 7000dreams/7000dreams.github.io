@@ -8,7 +8,6 @@ body {
     margin: 50px;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
     font-variant: small-caps;
     color: #1A73E8;
@@ -25,11 +24,12 @@ footer {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: justify;
     hyphens: auto;
-    margin: 50px;
+    margin: 50px; /* Margin around the footer */
+    padding: 20px; /* Padding inside the footer */
+    font-size: 0.8em; /* Slightly smaller text */
 }
 
 #quote-container {
     font-style: italic;
     color: #FFEB3B; /* Yellow color for the quote text */
 }
-
