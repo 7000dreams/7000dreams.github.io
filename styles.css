@@ -5,6 +5,7 @@ body {
     line-height: 1.5;
     text-align: justify;
     hyphens: auto;
+    margin: 50px;
 }
 
 
@@ -22,6 +23,9 @@ footer {
     background-color: #1A73E8; /* Dark blue background */
     color: #FFFFFF; /* White text */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: justify;
+    hyphens: auto;
+    margin: 50px;
 }
 
 #quote-container {
