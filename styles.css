@@ -23,11 +23,6 @@ p {
 footer {
     background-color: #1A73E8; /* Dark blue background */
     color: #FFFFFF; /* White text */
-    padding: 20px;
-    font-size: 1em; /* Standard font size */
-    position: relative; /* For positioning any elements inside the footer */
-    bottom: 0;
-    width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
