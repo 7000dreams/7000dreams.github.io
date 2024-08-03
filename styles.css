@@ -5,37 +5,38 @@ body {
     line-height: 1.6;
     text-align: justify;
     hyphens: auto;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 40px auto;
-    margin-right: 200px;
-    margin-left: 20px;
-    padding: 0 20px;
+    max-width: 90vw; /* Use viewport width for flexible width */
+    margin: 5% auto; /* Use percentage-based margin for responsive spacing */
+    padding: 0 5%; /* Use percentage-based padding for responsiveness */
+    margin-right: 40%;
+    margin-left: 5%;
 }
 
 header {
-    margin-left: 40px;
+    margin-left: 10%; /* Use percentage-based margin */
 }
+
 h1 {
     font-variant: small-caps;
     color: #1A73E8;
     line-height: 1.4;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-top: 1%; /* Use percentage-based margin */
+    margin-bottom: 1%; /* Use percentage-based margin */
 }
 
 h2, h3, h4, h5, h6 {
     font-variant: small-caps;
     color: #1A73E8;
     line-height: 1.4;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+   }
 
 p {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2em; /* Maintain spacing for readability */
 }
 
 footer {
@@ -44,10 +45,11 @@ footer {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     text-align: justify;
     hyphens: auto;
-    margin-left: 20px;
-    margin-right: 200px;
-    padding: 20px;
-    font-size: 0.9em;
+    margin: 5% auto; /* Use percentage-based margin */
+    padding: 2%; /* Use percentage-based padding */
+    font-size: 0.85em; /* Maintain font size */
+    margin-right: 45%;
+    margin-left: 10%;
 }
 
 #quote-container {
