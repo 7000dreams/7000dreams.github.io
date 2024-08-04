@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curious</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MN - A Repository</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="reflections.html">Reflections</a>
+            <a href="academics.html">Academics</a>
+            <a href="climbing.html">Climbing</a>
+            <a href="curious.html">Curiosities</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Curiosities!</h2>
+        <p>This page is mainly dedicated towards the curious spirits of young children, and towards recognising that parents learn a lot because of their children! This page is essentially made of small tidbits on various subjects which my daughter may ask me about (or which I may was to explain about), and which I try to see how best I can explain to a curious youngster. Topics will be added on an on-going basis, distributed across various subjects. This is a good way to practice the <a href=https://fs.blog/feynman-technique/>Feynman Technique</a> too... And thanks to <a href=https://www.perplexity.ai/>Perplexity</a>, which provides plenty of answers to a plenty of things!</p>
+    
+        <p><h3>Physics and Chemistry</h3></p>
+        
+        <p><em>If light can travel through a vaccum, why can't sound?</em></p> 
+        <p>The movement of light and sound 'waves' (and I leave aside the point, for now, that 'light' can be seen as 'particles' instead of 'waves)' fundamentally differs. Light, being an electromagnetic wave, consists of electric and magnetic fields that can self-propagate through a vacuum. This is because photons, the quantum particles of light, do not require a medium for transmission: they are their own medium. On the other hand, sound is a mechanical wave (caused by the oscillation of particles of other matter: sound itself is nothing) that necessitates a physical medium for propagation. It travels by creating compressions and rarefactions in the particles of the medium, whether gas, liquid, or solid. In a vacuum, the absence of particles precludes the transfer of these mechanical vibrations, rendering sound transmission impossible. If there is no matter, there are no sound waves possible because sound is basically a wave of other matter! This distinction underscores the fundamental difference between electromagnetic and mechanical waves, illustrating why electromagnetic radiation can traverse the vast emptiness of space while sound remains confined to environments with matter present. [Answer inspired by <a href=https://www.perplexity.ai/>Perplexity</a>]</p>
+        
+        <p>More subjects and topics coming soon!</p>
+    </div>
+    <footer>
+        <div id="quote-container"></div> <!-- Container for the quote -->
+        <script>
+            // Function to fetch quotes from the text file
+            async function fetchQuotes() {
+                const response = await fetch('quotes.txt');
+                const data = await response.text();
+                return data.split('\n').filter(quote => quote.trim() !== '');
+            }
+
+            // Function to display a random quote
+            async function displayRandomQuote() {
+                const quotes = await fetchQuotes();
+                if (quotes.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * quotes.length);
+                    const randomQuote = quotes[randomIndex];
+                    document.getElementById('quote-container').textContent = randomQuote;
+                } else {
+                    document.getElementById('quote-container').textContent = "No quotes available.";
+                }
+            }
+
+            // Call the function to display a quote when the page loads
+            displayRandomQuote();
+        </script>
+    </footer>
+</body>
+</html>
