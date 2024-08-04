@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curious</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .collapsible {
+            background-color: #f1f1f1;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            outline: none;
+            text-align: left;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .collapsible:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            padding: 0 10px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        .arrow {
+            float: right;
+            transition: transform 0.3s;
+        }
+
+        .arrow-up {
+            transform: rotate(180deg);
+        }
+
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,13 +59,40 @@
     </header>
     <div class="container">
         <h2>Curiosities!</h2>
-        <p>This page is mainly dedicated towards the curious spirits of young children, and towards recognising that parents learn a lot because of their children! This page is essentially made of small tidbits on various subjects which my daughter may ask me about (or which I may was to explain about), and which I try to see how best I can explain to a curious youngster. Topics will be added on an on-going basis, distributed across various subjects. This is a good way to practice the <a href=https://fs.blog/feynman-technique/>Feynman Technique</a> too... And thanks to <a href=https://www.perplexity.ai/>Perplexity</a>, which provides plenty of answers to a plenty of things!</p>
+        <p>This page is mainly dedicated towards the curious spirits of young children, and towards recognising that parents learn a lot because of their children! This page is essentially made of small tidbits on various subjects which my daughter may ask me about (or which I may was to explain about), and which I try to see how best I can explain to a curious youngster. Topics will be added on an on-going basis, distributed across various subjects. This is a good way to practice the <a href="https://fs.blog/feynman-technique/">Feynman Technique</a> too... And thanks to <a href="https://www.perplexity.ai/">Perplexity</a>, which provides plenty of answers to a plenty of things!</p>
+        
+        <h3>Physics and Chemistry</h3>
+
+    <!--Collapsible question answer-->
     
-        <p><h3>Physics and Chemistry</h3></p>
+        <button class="collapsible">If light can travel through a vacuum, why can't sound? <span class="arrow">▼</span></button>
+        <div class="content">
+            <p>The movement of light and sound 'waves' (and I leave aside the point, for now, that 'light' can be seen as 'particles' instead of 'waves)' fundamentally differs. Light, being an electromagnetic wave, consists of electric and magnetic fields that can self-propagate through a vacuum. This is because photons, the quantum particles of light, do not require a medium for transmission: they are their own medium. On the other hand, sound is a mechanical wave (caused by the oscillation of particles of other matter: sound itself is nothing) that necessitates a physical medium for propagation. It travels by creating compressions and rarefactions in the particles of the medium, whether gas, liquid, or solid. In a vacuum, the absence of particles precludes the transfer of these mechanical vibrations, rendering sound transmission impossible. If there is no matter, there are no sound waves possible because sound is basically a wave of other matter! This distinction underscores the fundamental difference between electromagnetic and mechanical waves, illustrating why electromagnetic radiation can traverse the vast emptiness of space while sound remains confined to environments with matter present. [Answer inspired by <a href="https://www.perplexity.ai/">Perplexity</a>]</p>
+        </div>
         
-        <p><em>If light can travel through a vaccum, why can't sound?</em></p> 
-        <p>The movement of light and sound 'waves' (and I leave aside the point, for now, that 'light' can be seen as 'particles' instead of 'waves)' fundamentally differs. Light, being an electromagnetic wave, consists of electric and magnetic fields that can self-propagate through a vacuum. This is because photons, the quantum particles of light, do not require a medium for transmission: they are their own medium. On the other hand, sound is a mechanical wave (caused by the oscillation of particles of other matter: sound itself is nothing) that necessitates a physical medium for propagation. It travels by creating compressions and rarefactions in the particles of the medium, whether gas, liquid, or solid. In a vacuum, the absence of particles precludes the transfer of these mechanical vibrations, rendering sound transmission impossible. If there is no matter, there are no sound waves possible because sound is basically a wave of other matter! This distinction underscores the fundamental difference between electromagnetic and mechanical waves, illustrating why electromagnetic radiation can traverse the vast emptiness of space while sound remains confined to environments with matter present. [Answer inspired by <a href=https://www.perplexity.ai/>Perplexity</a>]</p>
-        
+    <!-- For new question in this category:
+         <button class="collapsible">New Question? <span class="arrow">▼</span></button>
+        <div class="content">
+            <p>Answer to the new question.</p>
+        </div>
+    -->
+
+    
+    
+    <!--For new category
+        <h3>Geography</h3>
+
+        <button class="collapsible">What is the largest desert? <span class="arrow">▼</span></button>
+        <div class="content">
+            <p>Answer about the largest desert.</p>
+        </div>
+
+        <button class="collapsible">What is the longest river? <span class="arrow">▼</span></button>
+        <div class="content">
+            <p>Answer about the longest river.</p>
+        </div>
+    -->
+
         <p>More subjects and topics coming soon!</p>
     </div>
     <footer>
@@ -52,6 +119,21 @@
 
             // Call the function to display a quote when the page loads
             displayRandomQuote();
+
+            // JavaScript for collapsible content
+            document.querySelectorAll('.collapsible').forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const arrow = button.querySelector('.arrow');
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                        arrow.classList.remove('arrow-up');
+                    } else {
+                        content.style.display = "block";
+                        arrow.classList.add('arrow-up');
+                    }
+                });
+            });
         </script>
     </footer>
 </body>
