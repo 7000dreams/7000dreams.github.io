@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MN - Readings</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>MN - A Repository</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="reflections.html">Reflections</a>
-            <a href="academics.html">Academics</a>
-            <a href="curious.html">Curiosities</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+      <h1>MN - A Repository</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="reflections.html">Reflections</a>
+        <a href="academics.html">Academics</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
     <div class="container">
-        <h2>Legal Academics</h2>
-            <p>Here you'll find my academic writing and other academic materials. The focus is on tax law and private law. </p>
-        <h4>Contract Law</h4>
-            <p><a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod"> Contracts II - 2023</a>: a folder containing lecture notes and some slides on topics such as performance of contracts, unliquidated damages, liquidated damages, agency, indeminities and guarantees etc. These are raw materials, and are meant to be lecture-aids, not stand-alone materials.</p>
-            <p>My private law writings will be uploaded soon.</p>
-        <h4>Tax Law</h4>
-            <p><a href="Documents/Carbon-tax.pdf">Should there be a global carbon tax at a single rate?</a> [PDF]</p>
-            <p>More of tax law writings will be uploaded soon.</p>
-
+      <h2>Legal Academics</h2>
+      <p>
+        Here you'll find my academic writing and other academic materials. The
+        focus is on tax law and private law.
+      </p>
+      <h4>Contract Law</h4>
+      <p>
+        <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+          Contracts II - 2023</a
+        >: a folder containing lecture notes and some slides on topics such as
+        performance of contracts, unliquidated damages, liquidated damages,
+        agency, indeminities and guarantees etc. These are raw materials, and
+        are meant to be lecture-aids, not stand-alone materials.
+      </p>
+      <p>My private law writings will be uploaded soon.</p>
+      <h4>Tax Law</h4>
+      <p>
+        <a href="Documents/Carbon-tax.pdf"
+          >Should there be a global carbon tax at a single rate?</a
+        >
+        [PDF]
+      </p>
+      <p>More of tax law writings will be uploaded soon.</p>
     </div>
     <footer>
-        <div id="quote-container"></div> <!-- Container for the quote -->
-        <script>
-            // Function to fetch quotes from the text file
-            async function fetchQuotes() {
-                const response = await fetch('quotes.txt');
-                const data = await response.text();
-                return data.split('\n').filter(quote => quote.trim() !== '');
-            }
+      <div id="quote-container"></div>
+      <!-- Container for the quote -->
+      <script>
+        // Function to fetch quotes from the text file
+        async function fetchQuotes() {
+          const response = await fetch("quotes.txt");
+          const data = await response.text();
+          return data.split("\n").filter((quote) => quote.trim() !== "");
+        }
 
-            // Function to display a random quote
-            async function displayRandomQuote() {
-                const quotes = await fetchQuotes();
-                if (quotes.length > 0) {
-                    const randomIndex = Math.floor(Math.random() * quotes.length);
-                    const randomQuote = quotes[randomIndex];
-                    document.getElementById('quote-container').textContent = randomQuote;
-                } else {
-                    document.getElementById('quote-container').textContent = "No quotes available.";
-                }
-            }
+        // Function to display a random quote
+        async function displayRandomQuote() {
+          const quotes = await fetchQuotes();
+          if (quotes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            document.getElementById("quote-container").textContent =
+              randomQuote;
+          } else {
+            document.getElementById("quote-container").textContent =
+              "No quotes available.";
+          }
+        }
 
-            // Call the function to display a quote when the page loads
-            displayRandomQuote();
-        </script>
+        // Call the function to display a quote when the page loads
+        displayRandomQuote();
+      </script>
     </footer>
-</body>
+  </body>
 </html>

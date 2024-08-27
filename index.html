@@ -1,53 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MN - Home</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>MN - A Repository</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="reflections.html">Reflections</a>
-            <a href="academics.html">Academics</a>
-            <a href="curious.html">Curiosities</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+      <h1>MN - A Repository</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="reflections.html">Reflections</a>
+        <a href="academics.html">Academics</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
     <div class="container">
-        <h2>Welcome!</h2>
-        <p>This website is a personal website which is a repository of some of my writings, reflections and activities.</p>
-        <p>Long-form reflective essays (and also, sometimes, shorter thoughts and musings playing in my mind) are found on the <a href="reflections.html">Reflections</a> page. The <a href="academics.html">Academics</a> page will contain links to my academic writing and other academic materials. The <a href="curious.html">Curiosities</a> page is mainly dedicated towards acknowledging that I learn a lot from parenting. This has many forms, but to give an illustration of what this page is geared towards: my daughter often asks something which she is curious about (<em>"If light can travel through a vacuum, why can't sound?"</em>), and that makes me look up new things or search for the best way to explain something I already know. I thought a collection of questions and answers such as these may be of some interest to children and to parents of young children more generally as well. And you can reach out to me from the <a href="contact.html">Contact</a> page.</p>
-        <p>On the footer of each page, you will find some quotes which resonate with me, or which give me food for thought. Refresh the page for a new quote! I hope you relish them too.</p>
+      <h2>Welcome!</h2>
+      <p>
+        This website is a personal website which is a repository of some of my
+        writings, reflections and activities.
+      </p>
+      <p>
+        Long-form reflective essays (and also, sometimes, shorter thoughts and
+        musings playing in my mind) are found on the
+        <a href="reflections.html">Reflections</a> page. The
+        <a href="academics.html">Academics</a> page will contain links to my
+        academic writing and other academic materials. You can reach out to me
+        from the <a href="contact.html">Contact</a> page.
+      </p>
+      <p>
+        On the footer of each page, you will find some quotes which resonate
+        with me, or which give me food for thought. Refresh the page for a new
+        quote!
+      </p>
     </div>
     <footer>
-        <div id="quote-container"></div> <!-- Container for the quote -->
-        <script>
-            // Function to fetch quotes from the text file
-            async function fetchQuotes() {
-                const response = await fetch('quotes.txt');
-                const data = await response.text();
-                return data.split('\n').filter(quote => quote.trim() !== '');
-            }
+      <div id="quote-container"></div>
+      <!-- Container for the quote -->
+      <script>
+        // Function to fetch quotes from the text file
+        async function fetchQuotes() {
+          const response = await fetch("quotes.txt");
+          const data = await response.text();
+          return data.split("\n").filter((quote) => quote.trim() !== "");
+        }
 
-            // Function to display a random quote
-            async function displayRandomQuote() {
-                const quotes = await fetchQuotes();
-                if (quotes.length > 0) {
-                    const randomIndex = Math.floor(Math.random() * quotes.length);
-                    const randomQuote = quotes[randomIndex];
-                    document.getElementById('quote-container').textContent = randomQuote;
-                } else {
-                    document.getElementById('quote-container').textContent = "No quotes available.";
-                }
-            }
+        // Function to display a random quote
+        async function displayRandomQuote() {
+          const quotes = await fetchQuotes();
+          if (quotes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            document.getElementById("quote-container").textContent =
+              randomQuote;
+          } else {
+            document.getElementById("quote-container").textContent =
+              "No quotes available.";
+          }
+        }
 
-            // Call the function to display a quote when the page loads
-            displayRandomQuote();
-        </script>
+        // Call the function to display a quote when the page loads
+        displayRandomQuote();
+      </script>
     </footer>
-</body>
+  </body>
 </html>

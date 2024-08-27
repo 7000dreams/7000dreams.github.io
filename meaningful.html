@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting Course</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>MN - A Repository</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="reflections.html">Reflections</a>
+        <a href="academics.html">Academics</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <div class="container">
+      <h3>What constitutes a meaningful life?</h3>
+      <p>
+        Living a meaningful life sounds like a worthy goal; but until we can
+        begin to understand what 'meaning' entails, the goal is too abstract.
+      </p>
+      <p>
+        Perhaps, it is best to start with an acknowledgment that the quest for
+        'meaning' is personal journey. What may be meaningful for one person may
+        be entirely without meaning for another. So the real question is: what
+        would be a life full of meaning <em>for me</em>?
+      </p>
+      <p>
+        One could begin by elimination, by first identifying that which is not
+        meaningful. I can list the pursuit of money solely for the sake of money
+        as being at the head of that list. No doubt, money is important so far
+        as it enables one to have a base to start thinking about larger
+        questions. Without a stable financial base (at least to the extent of
+        meeting daily needs), questions of 'meaning' are premature at best and
+        meaningless at worst. But once that basic threshold is crossed, the
+        pursuit of money does not seem meaningful any more. Another item on the
+        list is the pursuit of 'status games'. I find no great purpose of
+        meaning in appearing successful, or in appearing to the world to be 'at
+        the top of the game'. If one participates in status games, it would seem
+        that one is constrained to participate in a game where the rules are set
+        by others, whether those rules align with one's own self or not. A third
+        item on this list would be this: the pursuit of activity for the sake of
+        activity, to show to the world how one is 'busy'. Being busy is, at the
+        highest, a morally neutral state: there is no inherent virtue in being
+        busy. Being busy, in itself, does not add any meaning to life. And being
+        busy to show other people that one is busy is in fact a detriment.
+      </p>
+      <p>
+        This shows that the pursuit of a career in tax litigation is certainly
+        not the way to a meaningful life for me. Yes, it pays: but that does not
+        add anything to finding meaning. And tax litigation - any type of career
+        in the practice of law, really - does involve plenty of status games.
+        And while being busy is not a virtue, the practice of law entails
+        showing that one is busy (perhaps this point is related to the point
+        about status games) without actually adding much value. The sheer
+        wastage of time spent waiting for Courts and clients simply has no
+        compensatory value attached to it.
+      </p>
+      <p>
+        So then, what would constitute 'meaning'? I think that a meaningful life
+        must mean a life spent maximising one's time in the zone of conscious
+        choice: where one does things because one wants to do them, and not
+        simply because one has to. A meaningful life is a life where one is in
+        control of one's time. Where one has the choice to decide how to spend
+        time. Each day, every day.
+      </p>
+      <p>
+        And what does one do with that time? In my view, that is not so
+        important - the fact that one is in control of one's time is itself the
+        key to meaning. Once that is the case, everything one does is in itself
+        meaningful. It is likely that in such a situation, one might spend
+        (within the zone of conscious choice) some time at leisure, and some
+        time in trying to push the frontiers of one's abilities in any field of
+        human endeavour. It might be that a leisure activity itself involves
+        participating in actions of pushing oneself in a given field. The choice
+        of the field itself does not seem to matter much; what gives life
+        meaning is not the field one is in, but the ability to be in control of
+        one's time together with the ability to consciously choose to be or not
+        be in the given field. This freedom is the key to a meaningful life.
+      </p>
+      <p>
+        One objection to this analysis appears - is this just an excuse to being
+        lazy? If this attitude is adopted to meaning, then does that mean one
+        should just spend time in frivolity and not undertake any challenging
+        undertaking? After all, why would one want to do something hard at all
+        in life; and if one does nothing hard in life, can it be a meaningful
+        life? In response to this, I would say that the issue hinges on freedom
+        and the zone of conscious choice. If one consciously chooses to
+        participate in leisure only, that is still meaningful enough. But
+        speaking for myself (and I have already highlighted that the quest for
+        meaning is a personal one), I would balance leisure together with doing
+        something productive. This 'productive' aspect could be seen in the
+        sense of enhancing the 'good' around me by producing something valuable
+        to the world around me, and could also be seen from a more internal
+        perspective - by trying to push the limits of what I personally think I
+        am capable of. And what is also important to acknowledge is that one can
+        choose to work hard despite not feeling like working at a given time -
+        that does not detract from freedom, because the choice of working hard
+        is also my choice. And I know that if I am working on something which I
+        feel does add value, then the thoughts of
+        <em>"oh I don't want to do this right now"</em> can be battled by me
+      </p>
+      <p>
+        So, in short, a meaningful life is a life of freedom, where one is in a
+        position to control one's time. And I would choose to use that time
+        consciously, in pushing myself to exploring the frontiers of my
+        abilities.
+      </p>
+    </div>
+    <footer>
+      <div id="quote-container"></div>
+      <!-- Container for the quote -->
+      <script>
+        // Function to fetch quotes from the text file
+        async function fetchQuotes() {
+          const response = await fetch("quotes.txt");
+          const data = await response.text();
+          return data.split("\n").filter((quote) => quote.trim() !== "");
+        }
+
+        // Function to display a random quote
+        async function displayRandomQuote() {
+          const quotes = await fetchQuotes();
+          if (quotes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            document.getElementById("quote-container").textContent =
+              randomQuote;
+          } else {
+            document.getElementById("quote-container").textContent =
+              "No quotes available.";
+          }
+        }
+
+        // Call the function to display a quote when the page loads
+        displayRandomQuote();
+      </script>
+    </footer>
+  </body>
+</html>
