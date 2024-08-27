@@ -1,118 +1,123 @@
 body {
-    background-color: #d0e7f5;
-    font-family: "Century Schoolbook", "Century Schoolbook L", "Century Schoolbook L Roman", "URW Bookman L", serif;
-    color: #333333;
-    line-height: 1.6;
-    text-align: justify;
-    hyphens: auto;
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
+  background-color: #ffffff;
+  font-family: "Century Schoolbook", "Century Schoolbook L",
+    "Century Schoolbook L Roman", "URW Bookman L", serif;
+  color: #333333;
+  line-height: 1.6;
+  text-align: justify;
+  hyphens: auto;
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
 }
 
 .container {
-    max-width: 90vw; /* Use viewport width for flexible width */
-    margin: 5% auto; /* Use percentage-based margin for responsive spacing */
-    padding: 0 5%; /* Use percentage-based padding for responsiveness */
-    margin-right: 20%;
-    margin-left: 5%;
+  max-width: 90vw; /* Use viewport width for flexible width */
+  margin: 5% auto; /* Use percentage-based margin for responsive spacing */
+  padding: 0 5%; /* Use percentage-based padding for responsiveness */
+  margin-right: 20%;
+  margin-left: 5%;
 }
 
 header {
-    margin-left: 10%; /* Use percentage-based margin */
+  margin-left: 10%; /* Use percentage-based margin */
 }
 
 h1 {
-    font-variant: small-caps;
-    color: #241146;
-    line-height: 1.4;
-    margin-top: 1%; /* Use percentage-based margin */
-    margin-bottom: 1%; /* Use percentage-based margin */
+  font-variant: small-caps;
+  color: #1031e8;
+  line-height: 1.4;
+  margin-top: 1%; /* Use percentage-based margin */
+  margin-bottom: 1%; /* Use percentage-based margin */
 }
 
-h2, h3, h4, h5, h6 {
-    font-variant: small-caps;
-    color: #241146;
-    line-height: 1.4;
-   }
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-variant: small-caps;
+  color: #1031e8;
+  line-height: 1.4;
+}
 
 p {
-    margin-bottom: 1.2em; /* Maintain spacing for readability */
+  margin-bottom: 1.2em; /* Maintain spacing for readability */
 }
 
 footer {
-    background-color: #241146;
-    color: #FFFFFF;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    hyphens: auto;
-    margin: 5% auto; /* Use percentage-based margin */
-    padding: 2%; /* Use percentage-based padding */
-    font-size: 0.85em; /* Maintain font size */
-    margin-right: 25%;
-    margin-left: 10%;
+  background-color: #1031e8;
+  color: #ffffff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  hyphens: auto;
+  margin: 5% auto; /* Use percentage-based margin */
+  padding: 2%; /* Use percentage-based padding */
+  font-size: 0.85em; /* Maintain font size */
+  margin-right: 25%;
+  margin-left: 10%;
 }
 
 #quote-container {
-    font-style: italic;
-    color: #FFEB3B;
+  font-style: italic;
+  color: #ffeb3b;
 }
 
 /* Media Queries for Different Screen Sizes */
 
 /* Tablets and below */
 @media (max-width: 768px) {
-    .container {
-        margin: 3% auto; /* Adjusted margin for smaller screens */
-        padding: 0 3%; /* Reduced padding */
-    }
+  .container {
+    margin: 3% auto; /* Adjusted margin for smaller screens */
+    padding: 0 3%; /* Reduced padding */
+  }
 
-    header {
-        margin: 3% auto; /* Adjusted margin for smaller screens */
-    }
+  header {
+    margin: 3% auto; /* Adjusted margin for smaller screens */
+  }
 
-    footer {
-        margin: 3% auto; /* Adjusted margin for smaller screens */
-        padding: 3%; /* Adjusted padding */
-    }
+  footer {
+    margin: 3% auto; /* Adjusted margin for smaller screens */
+    padding: 3%; /* Adjusted padding */
+  }
 
-    h1 {
-        margin-top: 3%; /* Adjusted top margin */
-        margin-bottom: 3%; /* Adjusted bottom margin */
-    }
+  h1 {
+    margin-top: 3%; /* Adjusted top margin */
+    margin-bottom: 3%; /* Adjusted bottom margin */
+  }
 }
 
 .form-wrapper {
-    background-color: #ffffff;
-    padding: 2%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 2%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 iframe {
-    width: 100%;
-    height: 800px; /* Adjust this based on the form's content */
-    border: none;
+  width: 100%;
+  height: 800px; /* Adjust this based on the form's content */
+  border: none;
 }
 
 /* Mobile screens */
 @media (max-width: 480px) {
-    .container {
-        margin: 2% auto; /* Further reduced margin for very small screens */
-        padding: 0 2%; /* Further reduced padding */
-    }
+  .container {
+    margin: 2% auto; /* Further reduced margin for very small screens */
+    padding: 0 2%; /* Further reduced padding */
+  }
 
-    header {
-        margin: 2% auto; /* Further reduced margin for very small screens */
-    }
+  header {
+    margin: 2% auto; /* Further reduced margin for very small screens */
+  }
 
-    footer {
-        margin: 2% auto; /* Further reduced margin for very small screens */
-        padding: 2%; /* Further reduced padding */
-    }
+  footer {
+    margin: 2% auto; /* Further reduced margin for very small screens */
+    padding: 2%; /* Further reduced padding */
+  }
 
-    h1 {
-        margin-top: 2%; /* Further reduced top margin */
-        margin-bottom: 2%; /* Further reduced bottom margin */
-    }
+  h1 {
+    margin-top: 2%; /* Further reduced top margin */
+    margin-bottom: 2%; /* Further reduced bottom margin */
+  }
 }
