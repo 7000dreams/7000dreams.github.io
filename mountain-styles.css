@@ -1,0 +1,286 @@
+/* General styling for the page */
+body,
+h1,
+h2,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #023628; /* Background consistent with homepage */
+  color: #f5f5f5;
+}
+
+header {
+  font-family: "Lora", serif;
+  background-color: #111d01;
+  color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+/* Styling for the clickable site title */
+.logo h1 a {
+  text-decoration: none; /* Remove underline from link */
+  color: #f5f5f5; /* Explicit color for the link */
+  display: flex; /* Ensure the title and logo are aligned correctly */
+  align-items: center;
+}
+
+.logo h1 a:hover,
+.logo h1 a:visited,
+.logo h1 a:active {
+  color: #f5f5f5; /* Keep the color consistent */
+}
+
+/* Navigation Links */
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-right: 15px;
+}
+
+header nav ul li a {
+  font-family: "Lora", serif;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Ensure the color of links does not change after they are clicked */
+header nav ul li a:hover,
+header nav ul li a:visited,
+header nav ul li a:active {
+  color: #f5f5f5; /* Keep color consistent */
+}
+
+/* Add this to your existing CSS */
+.nav-active {
+  color: #86bef3; /* Highlight color */
+  font-weight: bold; /* Make the active link bold */
+  text-decoration: underline; /* Add underline or any other style you prefer */
+}
+
+/* Container for main content and sidebar */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+/* Main content area with images */
+.main-content {
+  flex: 1;
+  background-color: #023628;
+  padding: 20px;
+  border-radius: 5px;
+  margin-right: 0; /* Ensure no right margin */
+  min-height: 700px; /* Increase the height to push footer down */
+}
+
+h2 {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+}
+
+/* Featured Image Grid */
+.featured-image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+  max-height: 650px; /* Fixed height with scrollbar */
+  overflow-y: auto; /* Enable scrolling */
+  justify-content: space-between; /* Spread items evenly */
+  width: 100%; /* Ensure the grid uses the full width */
+}
+
+/* Ensure each grid item fits within the grid */
+.grid-item {
+  width: calc(33.333% - 20px); /* Three items per row */
+  margin-bottom: 20px;
+  position: relative;
+  border: 3px solid #333333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img:hover {
+  transform: scale(1.05);
+}
+
+.grid-item span {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* Styling for the inner pages (Botswana, Bhigwan, etc.) */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-height: 650px; /* Limit the height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px;
+  background-color: #023628; /* Match background with home page */
+}
+
+/* Individual Image Items */
+.image-item {
+  flex: 1 1 calc(33.333% - 20px); /* Three items per row */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #333333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-item img {
+  width: 100%; /* Ensure images are responsive */
+  height: auto;
+  max-width: 300px; /* Adjust to match the size on the homepage */
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-item img:hover {
+  transform: scale(1.05);
+}
+
+.caption {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #f5f5f5;
+  background-color: #111d01;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Footer Link Styling */
+footer a:hover,
+footer a:visited,
+footer a:active {
+  color: #86bef3; /* Keep the color consistent for all states */
+}
+/*Body text link styling*/
+body a:hover,
+body a:visited,
+body a:active {
+  color: #86bef3; /* Keep the color consistent for all states */
+}
+
+/* Base styles for larger screens (desktops) */
+/* These are already defined in your existing CSS */
+
+@media (max-width: 768px) {
+  /* Styles for tablets and smaller screens */
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .logo {
+    margin-bottom: 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .featured-image-grid {
+    flex-direction: column;
+  }
+
+  .grid-item {
+    width: 100%; /* One item per row */
+  }
+
+  .image-item {
+    flex: 1 1 100%; /* One item per row */
+  }
+
+  footer {
+    font-size: 0.9em;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for small mobile screens */
+
+  header {
+    padding: 15px;
+  }
+
+  header .logo img {
+    max-height: 40px;
+  }
+
+  .grid-item {
+    width: 100%; /* Full width for images */
+    margin-bottom: 15px;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+}

@@ -1,8 +1,8 @@
 body {
-  background-color: #ffffff;
+  background-color: #eaf4d3;
   font-family: "Century Schoolbook", "Century Schoolbook L",
     "Century Schoolbook L Roman", "URW Bookman L", serif;
-  color: #333333;
+  color: #2e2e2e;
   line-height: 1.6;
   text-align: justify;
   hyphens: auto;
@@ -24,7 +24,7 @@ header {
 
 h1 {
   font-variant: small-caps;
-  color: #1031e8;
+  color: #203a28;
   line-height: 1.4;
   margin-top: 1%; /* Use percentage-based margin */
   margin-bottom: 1%; /* Use percentage-based margin */
@@ -36,7 +36,7 @@ h4,
 h5,
 h6 {
   font-variant: small-caps;
-  color: #1031e8;
+  color: #203a28;
   line-height: 1.4;
 }
 
@@ -45,7 +45,7 @@ p {
 }
 
 footer {
-  background-color: #1031e8;
+  background-color: #203a28;
   color: #ffffff;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   text-align: justify;
@@ -60,6 +60,28 @@ footer {
 #quote-container {
   font-style: italic;
   color: #ffeb3b;
+}
+
+/* Link styling */
+
+a {
+  color: #203a28; /* Forest green links */
+}
+
+a:hover {
+  color: #d4a373; /* Warm brown hover effect */
+  text-decoration: underline;
+}
+
+button {
+  background-color: #4a7c59;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+button:hover {
+  background-color: #d4a373; /* Subtle change to warm brown on hover */
 }
 
 /* Media Queries for Different Screen Sizes */
