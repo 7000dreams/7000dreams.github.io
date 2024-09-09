@@ -8,12 +8,31 @@ p {
   padding: 0;
 }
 
+h1 {
+  font-variant: small-caps;
+  color: #f5f5f5;
+  line-height: 1.4;
+  margin-top: 1%; /* Use percentage-based margin */
+  margin-bottom: 1%; /* Use percentage-based margin */
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-variant: small-caps;
+  color: #203a28;
+  line-height: 1.4;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Century Schoolbook", "Century Schoolbook L",
+    "Century Schoolbook L Roman", "URW Bookman L", serif;
   line-height: 1.6;
   padding: 20px;
-  background-color: #023628;
-  color: #f5f5f5;
+  background-color: #eaf4d3;
+  color: #2e2e2e;
 }
 
 header {
@@ -93,7 +112,7 @@ header nav ul li a:active {
 /* Main content area with images */
 .main-content {
   flex: 1;
-  background-color: #023628;
+  background-color: #eaf4d3;
   padding: 20px;
   border-radius: 5px;
   margin-right: 0; /* Ensure no right margin */
@@ -103,7 +122,7 @@ header nav ul li a:active {
 h2 {
   font-family: "Lora", serif;
   font-weight: 700;
-  color: #f5f5f5;
+  color: #203a28;
   margin-bottom: 20px;
 }
 
@@ -144,7 +163,7 @@ h2 {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #eff6e0;
   padding: 5px 10px;
   border-radius: 3px;
   font-weight: bold;
@@ -159,7 +178,7 @@ h2 {
   max-height: 650px; /* Limit the height */
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 20px;
-  background-color: #023628; /* Match background with home page */
+  background-color: #111d01; /* Match background with home page */
 }
 
 /* Individual Image Items */
@@ -198,7 +217,7 @@ footer {
   text-align: center;
   font-size: 0.8em;
   color: #f5f5f5;
-  background-color: #111d01;
+  background-color: #203a28;
   padding: 10px;
   border-radius: 4px;
 }
