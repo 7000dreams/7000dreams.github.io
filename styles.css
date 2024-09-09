@@ -20,6 +20,87 @@ body {
 
 header {
   margin-left: 10%; /* Use percentage-based margin */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  max-height: 50px;
+  margin-right: 10px;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  color: #203a28;
+}
+
+header nav ul li {
+  margin-right: 15px;
+}
+
+header nav ul li a {
+  font-family: "Lora", serif;
+  text-decoration: none;
+  color: #203a28;
+  font-weight: bold;
+}
+
+/* Ensure the color of links does not change after they are clicked */
+header nav ul li a:hover,
+header nav ul li a:visited,
+header nav ul li a:active {
+  color: #203a28; /* Keep color consistent */
+}
+
+/* Add this to your existing CSS */
+.nav-active {
+  color: #86bef3; /* Highlight color */
+  font-weight: bold; /* Make the active link bold */
+  text-decoration: underline; /* Add underline or any other style you prefer */
+}
+.logo h1 a {
+  text-decoration: none; /* Remove underline from link */
+  color: #203a28; /* Explicit color for the link */
+  display: flex; /* Ensure the title and logo are aligned correctly */
+  align-items: center;
+}
+
+.logo h1 a:hover,
+.logo h1 a:visited,
+.logo h1 a:active {
+  color: #203a28; /* Keep the color consistent */
+}
+
+/* Navigation Links */
+header nav ul {
+  display: flex;
+  list-style: none;
+  color: #203a28;
+}
+
+header nav ul li {
+  margin-right: 15px;
+}
+
+header nav ul li a {
+  font-family: "Lora", serif;
+  text-decoration: none;
+  color: #203a28;
+  font-weight: bold;
+}
+
+/* Ensure the color of links does not change after they are clicked */
+header nav ul li a:hover,
+header nav ul li a:visited,
+header nav ul li a:active {
+  color: #203a28; /* Keep color consistent */
 }
 
 h1 {
