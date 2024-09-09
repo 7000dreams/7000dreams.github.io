@@ -11,7 +11,7 @@
     <header>
       <div class="logo">
         <img src="images/logo.webp" alt="" />
-        <h1>Mountain Travels</h1>
+        <h1>Mountain Journeys</h1>
       </div>
       <nav>
         <ul>
@@ -55,34 +55,8 @@
       </section>
     </main>
     <footer>
-      <div id="quote-container"></div>
-      <!-- Container for the quote -->
-      <script>
-        // Function to fetch quotes from the text file
-        async function fetchQuotes() {
-          const response = await fetch("quotes.txt");
-          const data = await response.text();
-          return data.split("\n").filter((quote) => quote.trim() !== "");
-        }
-
-        // Function to display a random quote
-        async function displayRandomQuote() {
-          const quotes = await fetchQuotes();
-          if (quotes.length > 0) {
-            const randomIndex = Math.floor(Math.random() * quotes.length);
-            const randomQuote = quotes[randomIndex];
-            document.getElementById("quote-container").textContent =
-              randomQuote;
-          } else {
-            document.getElementById("quote-container").textContent =
-              "No quotes available.";
-          }
-        }
-
-        // Call the function to display a quote when the page loads
-        displayRandomQuote();
-      </script>
-    </footer>
+    <p>&copy; 2024 Mihir Naniwadekar</p>
+  </footer>
     <script src="js/scripts.js" defer></script>
 
   </body>
