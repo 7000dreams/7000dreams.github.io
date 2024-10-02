@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clarity Apps</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.webp" alt="" />
+        <h1>Academics</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="clarityone.html" class="nav-active">Clarity</a></li>
+          <li><a href="mountains.html">Mountains</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2>Clarity Apps</h2>
+      <p>
+        Here is some basic information about, and links to download, a few apps
+        which I have coded. Full source code is available in public domain as
+        well. While I am using these apps, presently these are still very much
+        works in progress; so feature suggestions, bug reports, or any comments
+        whatsoever will all be deeply appreciated!
+      </p>
+
+        <h4>Clarity Wiki</h4>
+        <p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for download</a>: [description of the app]
+        </p>
+        <p></p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for User Guide</a>
+        </p>
+        <p></p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for Source Code</a>
+        </p>
+
+        <h4>Clarity Explorer</h4>
+        <p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for download</a>: [description of the app]
+        </p>
+        <p></p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for User Guide</a>
+        </p>
+        <p></p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for Source Code</a>
+
+        </p>      <h4>Clarity Editor</h4>
+        <p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for download</a>: [description of the app]
+        </p>
+        <p></p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for User Guide</a>
+        </p>
+        <p></p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for Source Code</a>
+
+        </p>      <h4>Clarity Clip</h4>
+        <p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for download</a>: [description of the app]
+        </p>
+        <p></p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for User Guide</a>
+        </p>
+        <p></p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for Source Code</a>
+        </p>
+
+        <h4>Clarity Calendar</h4>
+        <p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for download</a>: [description of the app]
+        </p>
+        <p></p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for User Guide</a>
+        </p>
+        <p></p>
+            <a href="https://drive.proton.me/urls/7XDCE5DD9M#WKLDcyLNCLod">
+            Link for Source Code</a>
+        </p>
+     </div>
+    <footer>
+      <div id="quote-container"></div>
+      <!-- Container for the quote -->
+      <script>
+        // Function to fetch quotes from the text file
+        async function fetchQuotes() {
+          const response = await fetch("quotes.txt");
+          const data = await response.text();
+          return data.split("\n").filter((quote) => quote.trim() !== "");
+        }
+
+        // Function to display a random quote
+        async function displayRandomQuote() {
+          const quotes = await fetchQuotes();
+          if (quotes.length > 0) {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            document.getElementById("quote-container").textContent =
+              randomQuote;
+          } else {
+            document.getElementById("quote-container").textContent =
+              "No quotes available.";
+          }
+        }
+
+        // Call the function to display a quote when the page loads
+        displayRandomQuote();
+      </script>
+    </footer>
+  </body>
+</html>
